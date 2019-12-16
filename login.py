@@ -216,7 +216,7 @@ class BankingSystemLogin(object):
                     os.system('cls' if os.name == 'nt' else 'clear')
                 else:
                     final_val = int(row.at[row_num, 'balance']) - sub
-                    row.at[1, 'balance'] = str(final_val)
+                    row.at[row_num, 'balance'] = str(final_val)
                     break
         print('\nBalance has been updated.')
         return row
